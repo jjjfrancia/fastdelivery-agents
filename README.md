@@ -92,3 +92,6 @@ El workflow `.github/workflows/ci.yml` corre `pytest` en cada push.
 
 ---
 CortexGovernor™ Academy · powered by DiscoveryFast
+
+## Activar CI
+Este repo incluye `ci.example.yml`. Para activar GitHub Actions, muévelo a `.github/workflows/ci.yml` (requiere un token con scope `workflow`) o créalo desde la web de GitHub con ese contenido.
