@@ -1,0 +1,8 @@
+[
+  {"name": "Pizza Margarita", "price": 29.9, "active": true},
+  {"name": "Pizza Hawaiana", "price": 32.0, "active": false},
+  {"name": "Hamburguesa Clásica", "price": 19.9, "active": true},
+  {"name": "Lomo Saltado", "price": 24.5, "active": true},
+  {"name": "Ceviche", "price": 34.0, "active": true},
+  {"name": "Anticuchos", "price": 22.0, "active": false}
+]

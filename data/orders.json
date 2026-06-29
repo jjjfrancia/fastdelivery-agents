@@ -1,0 +1,5 @@
+{
+  "A1001": {"status": "en camino", "eta": "15 min", "items": ["Pizza Margarita"]},
+  "A1002": {"status": "entregado", "eta": null, "items": ["Hamburguesa Clásica"]},
+  "A1003": {"status": "preparándose", "eta": "35 min", "items": ["Lomo Saltado"]}
+}
