@@ -95,3 +95,6 @@ CortexGovernor™ Academy · powered by DiscoveryFast
 
 ## Activar CI
 Este repo incluye `ci.example.yml`. Para activar GitHub Actions, muévelo a `.github/workflows/ci.yml` (requiere un token con scope `workflow`) o créalo desde la web de GitHub con ese contenido.
+
+## Segundo ejemplo: Inmobiliaria
+Ver `docs/EJEMPLO_INMOBILIARIA.md` — lectura completa Planning → Spec → TDD con un agente de inmobiliaria (contratos, prompt, tool, 6 tests, ruteo).
