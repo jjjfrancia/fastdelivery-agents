@@ -1,0 +1,5 @@
+[
+  { "numero": "FD-1001", "estado": "En camino",      "eta_min": 12, "repartidor": "Luis",  "telefono_repartidor": "55-1111-1111" },
+  { "numero": "FD-1002", "estado": "En preparación",  "eta_min": 40, "repartidor": "Ana",   "telefono_repartidor": "55-2222-2222" },
+  { "numero": "FD-1003", "estado": "Entregado",       "eta_min": 0,  "repartidor": "Marco", "telefono_repartidor": "55-3333-3333" }
+]

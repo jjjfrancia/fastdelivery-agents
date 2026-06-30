@@ -1,0 +1,6 @@
+[
+  { "zona": "Polanco",   "costo": 49, "moneda": "MXN", "eta_min": 35 },
+  { "zona": "Condesa",   "costo": 39, "moneda": "MXN", "eta_min": 28 },
+  { "zona": "Del Valle", "costo": 45, "moneda": "MXN", "eta_min": 32 },
+  { "zona": "Coyoacán",  "costo": 59, "moneda": "MXN", "eta_min": 45 }
+]

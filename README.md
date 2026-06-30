@@ -70,6 +70,30 @@ pytest tests/test_unit.py -q    # ① unitaria
 pytest tests/test_integration.py -q  # ③ integral (HITL incluido)
 ```
 
+## El tablero de evidencia — `board_sync` + `SPRINT_BOARD.html`
+
+El tablero refleja la **evidencia real**, no lo que el agente "dice" que hizo. `board_sync` lee
+`TEST_LOGS.json` (red_at → green_at → audit_verdict) y **verifica cada archivo contra el disco**;
+si un agente declaró algo que no existe, lo marca como **inconsistencia** (no lo da por Done).
+
+```bash
+python board_sync.py        # genera SPRINT_BOARD.html y muestra el resumen en consola
+```
+
+Luego abre **`SPRINT_BOARD.html`** en el navegador para ver el tablero. No necesita dependencias.
+
+Ejemplo de salida en consola:
+```
+[2026-06-19 23:02:04] board_sync OK - 4 filas, 1 inconsistencias detectadas
+   -> src/tracking.py declarado por el agente pero NO existe en disco
+```
+
+- `TEST_LOGS.json` — la evidencia por capacidad (RED antes que GREEN + `audit_verdict`).
+- `board_sync.py` — verifica la evidencia contra el disco y genera el tablero.
+- `SPRINT_BOARD.html` — el tablero (se regenera cada vez que corres `board_sync`).
+
+> **Regla:** un ítem solo es **Done** si tiene RED→GREEN y `audit_verdict: PASS`. Una afirmación sin evidencia no mueve la tarjeta.
+
 ## Publicar en GitHub
 
 ```bash
@@ -92,9 +116,3 @@ El workflow `.github/workflows/ci.yml` corre `pytest` en cada push.
 
 ---
 CortexGovernor™ Academy · powered by DiscoveryFast
-
-## Activar CI
-Este repo incluye `ci.example.yml`. Para activar GitHub Actions, muévelo a `.github/workflows/ci.yml` (requiere un token con scope `workflow`) o créalo desde la web de GitHub con ese contenido.
-
-## Segundo ejemplo: Inmobiliaria
-Ver `docs/EJEMPLO_INMOBILIARIA.md` — lectura completa Planning → Spec → TDD con un agente de inmobiliaria (contratos, prompt, tool, 6 tests, ruteo).

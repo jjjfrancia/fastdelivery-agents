@@ -5,10 +5,28 @@ Sin ANTHROPIC_API_KEY funciona igual (clasificador por palabras clave + plantill
 """
 import os
 import sys
+from pathlib import Path
 from . import coordinator, agents
 
 
+def _load_env():
+    """Carga variables desde un archivo .env en la raíz del proyecto (si existe).
+
+    Así, poner ANTHROPIC_API_KEY en .env SÍ funciona — sin dependencias externas.
+    """
+    env = Path(__file__).resolve().parent.parent / ".env"
+    if not env.exists():
+        return
+    for raw in env.read_text(encoding="utf-8").splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, val = line.split("=", 1)
+        os.environ.setdefault(key.strip(), val.strip().strip('"').strip("'"))
+
+
 def get_client():
+    _load_env()
     if not os.environ.get("ANTHROPIC_API_KEY"):
         return None
     try:
