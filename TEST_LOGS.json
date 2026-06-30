@@ -1,0 +1,6 @@
+[
+  {"item": "Agente Coordinador (ruteo)", "archivo": "src/coordinator.py", "red_at": "2024-06-19T13:10:00Z", "green_at": "2024-06-19T13:28:11Z", "audit_verdict": "PASS"},
+  {"item": "Agente de Pedidos", "archivo": "src/agents.py", "red_at": "2024-06-19T13:41:00Z", "green_at": "2024-06-19T14:05:23Z", "audit_verdict": "PASS"},
+  {"item": "Herramientas (tools)", "archivo": "src/tools.py", "red_at": "2024-06-19T14:12:00Z", "green_at": "2024-06-19T14:33:40Z", "audit_verdict": "PASS"},
+  {"item": "Pantalla de seguimiento (declarada por el agente)", "archivo": "src/tracking.py", "red_at": "2024-06-19T15:40:00Z", "green_at": null, "audit_verdict": null}
+]
