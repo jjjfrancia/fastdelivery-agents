@@ -11,3 +11,5 @@ PRUEBAS_DASHBOARD.html
 coverage.json
 junit.xml
 assets/
+ejemplos/salida_test_generado.py
+ejemplos/ui_generada.html
