@@ -13,3 +13,4 @@ junit.xml
 assets/
 ejemplos/salida_test_generado.py
 ejemplos/ui_generada.html
+ejemplos/agente.log
